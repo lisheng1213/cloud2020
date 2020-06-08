@@ -1,0 +1,21 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: fefin-order
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+      #defaultZone: http://eureka7001.com:7001/eureka, http://eureka7002.com:7002/eureka
+ribbon:
+  ReadTimeout:  5000  #服务连接时间
+  ConnectTimeout: 5000  #获取服务返回时间
+
+logging:
+  level:
+    com.ls.springcloud.services.PaymentFeignService: debug #哪个类开启日志
+
